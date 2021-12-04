@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/welcomemesg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/start_service"
+
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="start service"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomemesg"></Button>
+
+    <Button
+        android:id="@+id/stop_service"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="stop service"
+        app:layout_constraintEnd_toEndOf="@+id/start_service"
+        app:layout_constraintStart_toStartOf="@+id/start_service"
+        app:layout_constraintTop_toBottomOf="@+id/start_service"></Button>
+
+    <Button
+        android:id="@+id/songlist"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:text="Get All Songs"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></Button>
+
+    <Spinner
+        android:id="@+id/song_spinner"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="31dp"
+        android:foreground="@color/cardview_shadow_start_color"
+        android:prompt="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/onesong"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:text="Play this song"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/song_spinner"
+        app:layout_constraintTop_toTopOf="@+id/song_spinner" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="116dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onesong" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="ALL SONGS"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stop_service" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="PLAY JUST ONE SONG"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/stop_service"
+        app:layout_constraintStart_toStartOf="@+id/stop_service"
+        app:layout_constraintTop_toBottomOf="@+id/songlist" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="Select song here"
+        android:textColor="#5C5959"
+        android:textSize="15sp"
+
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/song_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
